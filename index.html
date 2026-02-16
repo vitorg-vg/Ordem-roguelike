@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ordem Roguelike - BETA</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TELA 1 -->
+<div id="screen-class" class="screen">
+    <h1>Escolha sua Classe</h1>
+    <button onclick="selectClass('Combatente')">Combatente</button>
+    <button onclick="selectClass('Especialista')">Especialista</button>
+    <button onclick="selectClass('Ocultista')">Ocultista</button>
+</div>
+
+<!-- TELA 2 -->
+<div id="screen-skill" class="screen hidden">
+    <h1>Escolha uma Habilidade</h1>
+    <div id="skill-options"></div>
+</div>
+
+<!-- TELA 3 -->
+<div id="screen-weapon" class="screen hidden">
+    <h1>Sua Arma Inicial</h1>
+    <div id="weapon-result"></div>
+    <button onclick="startBattle()">Iniciar Combate</button>
+</div>
+
+<!-- TELA 4 - COMBATE -->
+<div id="screen-battle" class="screen hidden">
+
+    <!-- HUD SUPERIOR -->
+    <div id="top-hud">
+        <div>PV: <span id="hpText">30</span></div>
+        <div>PE: <span id="peText">10</span></div>
+        <div>Classe: <span id="classText"></span></div>
+    </div>
+
+    <!-- ÁREA CENTRAL -->
+    <div id="enemy-area">
+        <h2 id="enemyName"></h2>
+
+        <div id="enemy-health-container">
+            <div id="enemy-health-bar"></div>
+        </div>
+    </div>
+
+    <!-- BOTÕES -->
+    <div id="main-actions">
+        <button onclick="playerAttack()">ATACAR</button>
+        <button onclick="useSkill()">HABILIDADE</button>
+    </div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+</html>
