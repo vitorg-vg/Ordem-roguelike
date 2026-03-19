@@ -1,57 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ordem Roguelike - BETA</title>
-<link rel="stylesheet" href="css/style.css">
+<title>Ordem Roguelike</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="screen-class" class="screen">
-    <h1>Escolha sua Classe</h1>
-    <button onclick="selectClass('Combatente')">Combatente</button>
-    <button onclick="selectClass('Especialista')">Especialista</button>
-    <button onclick="selectClass('Ocultista')">Ocultista</button>
+<h1>Escolha sua Classe</h1>
+<button onclick="selectClass('Combatente')">Combatente</button>
+<button onclick="selectClass('Especialista')">Especialista</button>
+<button onclick="selectClass('Ocultista')">Ocultista</button>
 </div>
 
 <div id="screen-skill" class="screen hidden">
-    <h1>Escolha uma Habilidade</h1>
-    <div id="skill-options"></div>
+<h1>Escolha uma Habilidade</h1>
+<div id="skill-options"></div>
 </div>
 
 <div id="screen-weapon" class="screen hidden">
-    <h1>Sua Arma Inicial</h1>
-    <div id="weapon-result"></div>
-    <button onclick="startBattle()">Iniciar Combate</button>
+<h1>Sua Arma</h1>
+<div id="weapon-result"></div>
+<button onclick="startBattle()">Iniciar</button>
 </div>
 
 <div id="screen-battle" class="screen hidden">
 
-    <div id="top-hud">
-        <div>PV: <span id="hpText">30</span></div>
-        <div>PE: <span id="peText">10</span></div>
-        <div>Classe: <span id="classText"></span></div>
-    </div>
+<div id="hud">
+<span id="hpText"></span>
+<span id="peText"></span>
+</div>
 
-    <div id="enemy-area">
-        <h2 id="enemyName"></h2>
+<h2 id="enemyName"></h2>
+<div id="enemyBar"><div id="enemyHP"></div></div>
 
-        <div id="enemy-health-container">
-            <div id="enemy-health-bar"></div>
-        </div>
-    </div>
+<div id="actions">
+<button onclick="playerAttack()">Atacar</button>
+<button onclick="renderSkillsBattle()">Habilidades</button>
+</div>
 
-    <div id="main-actions">
-        <button onclick="playerAttack()">ATACAR</button>
-        <button onclick="useSkill()">HABILIDADE</button>
-    </div>
+<div id="skillsBattle"></div>
 
 </div>
 
-<script src="js/data.js"></script>
-<script src="js/combat.js"></script>
-<script src="js/game.js"></script>
+<script src="data.js"></script>
+<script src="game.js"></script>
+<script src="combat.js"></script>
 
 </body>
 </html>
