@@ -1,76 +1,47 @@
-body {
-    margin: 0;
-    background: black;
-    color: white;
-    font-family: monospace;
+body{
+background:black;
+color:white;
+font-family:monospace;
+margin:0;
 }
 
-.screen {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.screen{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
 
-.hidden {
-    display: none;
+.hidden{display:none;}
+
+button{
+margin:5px;
+padding:10px;
+width:200px;
+background:black;
+color:white;
+border:2px solid white;
 }
 
-button {
-    background: black;
-    color: white;
-    border: 2px solid white;
-    padding: 12px;
-    margin: 5px;
-    width: 220px;
+#hud{
+display:flex;
+gap:20px;
+margin-bottom:10px;
 }
 
-/* HUD */
-#screen-battle {
-    justify-content: space-between;
+#enemyBar{
+width:80%;
+height:20px;
+border:2px solid white;
 }
 
-#top-hud {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 2px solid white;
-    padding: 8px 0;
+#enemyHP{
+height:100%;
+background:red;
+width:100%;
 }
 
-#enemy-area {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#enemy-health-container {
-    width: 80%;
-    height: 20px;
-    border: 2px solid white;
-}
-
-#enemy-health-bar {
-    height: 100%;
-    width: 100%;
-    background: red;
-    transition: width 0.3s ease;
-}
-
-#main-actions {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px 0;
-    border-top: 2px solid white;
-}
-
-@media (orientation: landscape) {
-    #main-actions button {
-        width: 40%;
-    }
+@media (orientation: landscape){
+button{width:40%;}
 }
