@@ -130,3 +130,9 @@ efeito:p=> p.multiRitual = true }
 ]
 
 };
+
+const WEAPONS = {
+Combatente:[{nome:"Espada", dano:"1d8"}],
+Especialista:[{nome:"Pistola", dano:"1d8"}],
+Ocultista:[{nome:"Adaga", dano:"1d6"}]
+};
